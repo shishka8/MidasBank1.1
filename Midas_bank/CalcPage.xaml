@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MidasBank.CalcPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+    <Grid Margin="30">
+        <StackPanel Width="400" HorizontalAlignment="Left">
+            <TextBlock Text="КРЕДИТНЫЙ КАЛЬКУЛЯТОР" Foreground="{StaticResource GoldPrimary}" 
+                       FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Сумма кредита (Gold)" Foreground="Gray" Margin="0,10,0,5"/>
+            <TextBox x:Name="txtAmount" Style="{StaticResource MidasInputStyle}" Text="100000"/>
+
+            <TextBlock Text="Срок (в месяцах)" Foreground="Gray" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtMonths" Style="{StaticResource MidasInputStyle}" Text="12"/>
+
+            <TextBlock Text="Процентная ставка (%)" Foreground="Gray" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtRate" Style="{StaticResource MidasInputStyle}" Text="15"/>
+
+            <Button Content="РАССЧИТАТЬ ПЛАТЕЖ" Style="{StaticResource MidasButtonStyle}" 
+                    Margin="0,30,0,0" Height="50" Click="BtnCalc_Click"/>
+
+            <Border Background="#1A1A1A" Margin="0,30,0,0" Padding="20" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock Text="ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ:" Foreground="Gray" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="txtResult" Text="0.00" Foreground="{StaticResource GoldPrimary}" 
+                               FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

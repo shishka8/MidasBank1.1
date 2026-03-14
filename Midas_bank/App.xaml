@@ -1,0 +1,53 @@
+﻿<Application x:Class="MidasBank.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="GoldPrimary" Color="#FFD700"/>
+        <SolidColorBrush x:Key="GoldDark" Color="#B8860B"/>
+        <SolidColorBrush x:Key="MidasBlack" Color="#121212"/>
+        <SolidColorBrush x:Key="MidasGray" Color="#1E1E1E"/>
+        <SolidColorBrush x:Key="TextWhite" Color="#F5F5F5"/>
+        <Style x:Key="MidasButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource GoldPrimary}"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource GoldDark}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="MidasInputStyle" TargetType="Control">
+            <Setter Property="Background" Value="#2A2A2A"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource GoldDark}"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource GoldDark}"/>
+            <Setter Property="RowBackground" Value="#1E1E1E"/>
+            <Setter Property="AlternatingRowBackground" Value="#252525"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#333"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="RowHeight" Value="35"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="{StaticResource MidasGray}"/>
+            <Setter Property="Foreground" Value="{StaticResource GoldPrimary}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="BorderBrush" Value="{StaticResource GoldDark}"/>
+        </Style>
+    </Application.Resources>
+</Application>

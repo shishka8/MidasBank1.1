@@ -1,0 +1,44 @@
+﻿<Window x:Class="MidasBank.AddClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация нового VIP-клиента" Height="550" Width="450"
+        Background="{StaticResource MidasBlack}" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Background="{StaticResource MidasBlack}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="350">
+
+            <TextBlock Text="НОВЫЙ КЛИЕНТ" Foreground="{StaticResource GoldPrimary}" 
+                   FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,25">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="5" Color="Gold" ShadowDepth="0"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <TextBlock Text="ФИО Клиента" Foreground="Gray" FontSize="11" Margin="0,5"/>
+            <TextBox x:Name="txtFullName" Style="{StaticResource MidasInputStyle}" Padding="5,0"/>
+
+            <TextBlock Text="Паспортные данные" Foreground="Gray" FontSize="11" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtPassport" Style="{StaticResource MidasInputStyle}" Padding="5,0"/>
+
+            <TextBlock Text="Номер телефона" Foreground="Gray" FontSize="11" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtPhone" Style="{StaticResource MidasInputStyle}" Padding="5,0"/>
+
+            <TextBlock Text="Электронная почта" Foreground="Gray" FontSize="11" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtEmail" Style="{StaticResource MidasInputStyle}" Padding="5,0"/>
+
+            <Grid Margin="0,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Content="ОТМЕНА" Click="BtnCancel_Click" 
+                    Background="Transparent" Foreground="Gray" BorderThickness="0" Margin="5"/>
+
+                <Button Grid.Column="1" x:Name="BtnSave" Content="СОХРАНИТЬ" 
+                    Style="{StaticResource MidasButtonStyle}" Height="40" 
+                    Click="BtnSave_Click" Margin="5"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
